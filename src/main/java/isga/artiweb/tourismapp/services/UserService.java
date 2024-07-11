@@ -5,15 +5,15 @@ import isga.artiweb.tourismapp.dto.UserDTO;
 import java.util.List;
 
 public interface UserService {
-    UserDTO createUser(UserDTO user);
+    UserDTO createUser(UserDTO userdto);
 
-    UserDTO updateUser(UserDTO user, Long userId);
+    UserDTO updateUser(UserDTO userDTO, Integer userId);
 
     UserDTO getUserByEmail(String email);
 
-    UserDTO getUserById(Long userId);
+    UserDTO getUserById(Integer userId);
 
     List<UserDTO> getAllUsers();
 
-    void deleteUserById(Long ID);
+    void deleteUserById(Integer userId);
 }
