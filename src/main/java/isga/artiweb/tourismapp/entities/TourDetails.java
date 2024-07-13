@@ -2,10 +2,7 @@ package isga.artiweb.tourismapp.entities;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
+import lombok.*;
 import org.hibernate.validator.constraints.Length;
 
 import java.time.LocalDate;
@@ -16,6 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 @Data
 @Entity
+@Builder
 @Table(name = "tour_details")
 public class TourDetails {
     @Id

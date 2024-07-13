@@ -1,19 +1,27 @@
 package isga.artiweb.tourismapp.services;
 
+import isga.artiweb.tourismapp.dto.ReqRes;
 import isga.artiweb.tourismapp.dto.UserDTO;
+import isga.artiweb.tourismapp.entities.User;
 
 import java.util.List;
 
 public interface UserService {
-    UserDTO createUser(UserDTO userdto);
+    ReqRes register(ReqRes registrationRequest);
 
-    UserDTO updateUser(UserDTO userDTO, Integer userId);
+    ReqRes login(ReqRes loginRequest);
 
-    UserDTO getUserByEmail(String email);
+    ReqRes refreshToken(ReqRes refreshTokenRequest);
 
-    UserDTO getUserById(Integer userId);
+    ReqRes updateUser(User updatedUser, Integer userId);
 
-    List<UserDTO> getAllUsers();
+//    UserDTO getUserByEmail(String email);
 
-    void deleteUserById(Integer userId);
+    ReqRes getUserById(Integer id);
+
+    ReqRes getAllUsers();
+
+    ReqRes deleteUserById(Integer userId);
+
+    ReqRes getMyInfo(String email);
 }
