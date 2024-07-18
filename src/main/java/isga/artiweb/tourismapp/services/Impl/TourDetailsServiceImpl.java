@@ -82,7 +82,7 @@ public class TourDetailsServiceImpl implements TourDetailsService {
 
     @Override
     public List<TourDetailsDTO> getToursByDestination(String destination) {
-        List<TourDetails> tourDetailsList = tourDetailsRepository.findByDestination(destination)
+        List<TourDetails> tourDetailsList = tourDetailsRepository.findByDestinationCity(destination)
                 .orElseThrow(() -> new ResourceNotFoundException("Tour details", "destination", destination));
         List<TourDetailsDTO> tourDetailsDTOList = tourDetailsList.stream()
                 .map((tourDetails) -> modelMapper.map(tourDetails, TourDetailsDTO.class))

@@ -10,7 +10,7 @@ import java.util.Optional;
 
 public interface TourDetailsRepository extends JpaRepository<TourDetails, Integer> {
 
-    Optional<List<TourDetails>> findByDestination(String destination);
+    Optional<List<TourDetails>> findByDestinationCity(String destination);
     @Query(value="select * from tour_details where tour_start >= DATE(NOW()) ORDER BY booking_price", nativeQuery = true)
     List<TourDetails> findTourByBudget();
     @Query(value = "select *, tour_end_date - tour_start_date AS duration from tour_details where tour_start >= DATE(NOW()) ORDER BY duration", nativeQuery = true)

@@ -2,6 +2,7 @@ package isga.artiweb.tourismapp.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -13,6 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 @Table(name = "booking")
+@Builder
 public class Booking {
 
     @Id
